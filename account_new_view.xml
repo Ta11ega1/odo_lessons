@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+	    <record id="account_invoice_dte_view" model="ir.ui.view">
+            <field name="name">account.invoice.dte.form</field>
+            <field name="model">mi_modulo.mi_tabla_</field>
+            <field name="arch" type="xml">
+                <form string="Imprimir datos">
+                    <p class="oe_grey">
+						Confirma para imprimir tus datos
+                    </p>
+                    <footer>
+                        <button string="Confirmar" name="invoice_confirm_dte" type="object" default_focus="1" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <act_window
+            name="Imprimir"
+            res_model="mi_modulo.mi_tabla_"
+            src_model="mi_modulo.mi_tabla"
+            view_mode="form"
+            target="new"
+            domain= "[([])]"
+            key2="client_action_multi"
+            id="action_confirm_dte"/>		
+		
+	</data>
+</openerp>

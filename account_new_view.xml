@@ -10,11 +10,13 @@
                     <p class="oe_grey">
 						Confirma para imprimir tus datos
                     </p>
+					
                     <footer>
-                        <button string="Confirmar" name="invoice_confirm_dte" type="object" default_focus="1" class="oe_highlight"/>
+                        <button string="Confirmar" name="imprimir_excel" type="object" default_focus="1" class="oe_highlight"/>
                         or
-                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                        <button string="Cancelar" name="eliminar_excel" class="oe_link" special="cancel"/>
                     </footer>
+					
                 </form>
             </field>
         </record>
@@ -25,9 +27,8 @@
             src_model="mi_modulo.mi_tabla"
             view_mode="form"
             target="new"
-            domain= "[([])]"
             key2="client_action_multi"
-            id="action_confirm_dte"/>		
+            id="action_confirm_dte"/>	
 		
 	</data>
 </openerp>
